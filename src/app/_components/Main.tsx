@@ -26,6 +26,12 @@ export default function Main(){
     setQuestion(event.target.value);
   };
 
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+        handleSubmit(content[selectedItem].endpoint)(); // 엔터키가 눌리면 handleSubmit 실행
+    }
+};
+
   const handleSubmit = (endpoint: string) => {
     return () => {  
       setLoading(true);
@@ -225,6 +231,7 @@ export default function Main(){
                     <div className={style.questionAreaContainer}>
                         <div className={style.questionArea}>
                         <input 
+                            onKeyDown={handleKeyPress}
                             placeholder={`${content[selectedItem].title}에게 질문하기`} 
                             className={style.questionbox} 
                             value={question} 
