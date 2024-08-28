@@ -6,36 +6,110 @@
     height: 100dvh;
 }
 .containerLeft{
-    background-color: red;
     width: 254px;
     height: 100%;
+    border-right: 1px solid #C7C5BD;
+    background-color: #F7F7F5;
+}
+.containerLeft >img{
+    margin-top: 31px;
+    margin-right: 85px;
+    margin-left:61px;
+    width: 108px;
+    height: 22px;
+}
+.companyMenu{
+    
+    position: inherit;
+    margin-top:100px;
+    margin-left:28px;
+    margin-right: 17.37px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C7C5BD;
+
+}
+.companyMenu li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.companyMenu li img:first-child{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.companyMenu li div{
+    padding-left: 10px;
+    color:#61605A;
+}
+.companyMenu li img:last-child {
+    width: 15.63px;
+    height: 13.13px;
+    position:absolute;
+    right:1px
 }
 .containerRight{
- background-color: blue;
  width: 100%;
  height: 100%;
  flex:1;
  display: flex;
  flex-direction: column;
+ position: relative;
 }
 .rightHeader{
- background-color: purple;
  height: 51px;
  width: 100%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ border-bottom: 1px solid #C7C5BD;
+ padding-left: 25px;
 }
 .rightBody{
-    background-color: pink;
     flex:1;
-    width:100%;
-}
-.whatisit{
-    background-color: yellow;
-    height: 276px;
-    width:100%;
+    display: flex;
+    flex-direction: column;
     padding: 0 206px;
 }
+.bodyHeader{
+   padding-bottom: 20px;
+   border-bottom: 1px solid #C7C5BD;
+}
+.bodyHeaderContainer{
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    padding-left: 20px;
+}
+.bodyHeaderContainer img{
+    
+    width: 176px;
+    height: 176px;
+    border-radius: 20px;
+}
+.bodyHeaderContents{
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 25px;
+}
+.bodyHeaderContents h3{
+    margin-bottom: 12px;
+}
+.bodyHeaderContents div{
+    color:#61605A;
+}
+.notice{
+    text-align: center;
+    margin-top: 18px;
+    color: #888680;
+}
 .chatArea{
-    background-color: white;
+    margin-top: 20px;
     padding: 0 206px;
 }
 .message {
@@ -53,11 +127,26 @@
 }
 .myMessage .content {
     background-color: white;
-    border-top-left-radius: 22px;
-    border-top-right-radius: 22px;
-    border-bottom-left-radius: 22px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
     color: #61605A;
     border: 1px solid #C7C5BD;
+}
+.aiChatHeader{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 28px;
+}
+.aiChatHeader img{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+.aiChatHeader div{
+    color:#61605A;
+    padding-left: 15px;
+    text-align: center;
 }
 .aiMessage {
     display: flex;
@@ -65,20 +154,43 @@
     align-items: flex-start;
 }
 .aiMessage .content {
-    background-color: #C0B3FF;
-    border-top-left-radius: 22px;
-    border-top-right-radius: 22px;
-    border-bottom-right-radius: 22px;
-    color: black;
+    background-color: #ECEBE8;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #61605A;
     width: 100%;
 }
 
-.qustionAreaContainer{
-    padding: 0 206px;
-   
+.questionAreaContainer{
+    position: absolute; /* absolute position for questionAreaContainer */
+    bottom: 12px; /* Positioning it 12px from the bottom */
+    left: 0; /* Align to the left of the container */
+    right: 0; /* Align to the right of the container */
+    padding: 0 380px;
 }
-.qustionArea{
+.questionArea{
     width: 100%;
-    border-radius: 15px;
     border: 1px solid #C7C5BD;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 14px;
+}
+.questionArea span{
+    width:25px;
+    height: 25px;
+    background-color: #C7C5BD;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.questionbox{
+   flex:1;
+   padding: 17px 0px 17px 22px;
+   outline: none;
+   border: none;
+   border-radius: 15px;
 }

@@ -88,6 +88,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-end-rgb));
+  font-family: Arial, sans-serif;
 }
 
 a {
